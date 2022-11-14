@@ -18,7 +18,7 @@ This is a command-line application that dynamically generates a professional REA
 For the installation of this app, the user should have Node.js installed as well as npm manager. Once those are installed, use ``` npm i -y ``` to download a json package and begin using the application.
 
 ## Testing
-To test the application open an integrated terminal for the index.js file and run ‘node index.js’ in the terminal. This will begin the prompted questions for the README.md file.
+To test the application open an integrated terminal for the index.js file and run ``` node index.js ``` in the terminal. This will begin the prompted questions for the README.md file.
 
 ## Contribution
 If a user wants to contribute to this repo they can download the code using an ssh key and work locally from their own repository.
