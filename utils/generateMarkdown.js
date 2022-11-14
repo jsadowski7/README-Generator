@@ -46,41 +46,90 @@ function renderLicenseSection(license){
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  const sections = ["Description", "Installation", "Testing", "Contribution", "Mock-Up", "Application", "License", "Contact"];
 
-  ## license
-    ${data.license}
-    
-  ## Table of Contents
+  let markdown = "# " + data.title + "\n";
 
-    - [Description](#description)
-    - [installation](#installation)
-    - [testing](#testing)
-    - [contribution](#contribution)
-    - [Mock-Up](#mock-up)
-    - [Application](#link-to-app)
-    - [license](#license)
-    - [email](#email)
-    - [GitHub](#GitHub)
-    
-  ## description
-  ${data.description}
-    
-  ## installation
-  ${data.installation}
-    
-  ## testing
-  ${data.testing}
-    
-  ## contribution
-  ${data.contribution}
+  markdown += renderLicenseBadge(data.license) + "\n";
 
-  ## Mock-Up
+  markdown += "## Table of Contents\n";
+  for (let i = 0; i < sections.length; i++) {
+    if (! (sections[i] === "License" && data.license === "None")) {
+      markdown += i + 1 + ". [" + sections[i] + "](#" + sections[i][0].toLowerCase() + sections[i].substring(1) + ")\n";
+    }
+  }
+  markdown += "\n";
 
-  ## Contact Me  
-    Email: ${data.email}
+  markdown += "## " + sections[0] + "\n";
+  markdown += data.description + "\n";
+  markdown += "\n";
+
+  // add installation
+  markdown += "## " + sections[1] + "\n";
+  markdown += data.install + "\n";
+  markdown += "\n";
+
+  // add testing
+  markdown += "## " + sections[2] + "\n";
+  markdown += data.testing + "\n";
+  markdown += "\n";
+
+  // add contributing
+  markdown += "## " + sections[3] + "\n";
+  markdown += data.contribution + "\n";
+  markdown += "\n";
+
+  // add mock-up
+  markdown += "## " + sections[4] + "\n";
+  markdown += data.test + "\n";
+  markdown += "\n";
+
+  // add license
+  markdown += renderLicenseSection(data.license) + "\n";
+  markdown += "\n";
   
-    GitHub: ${data.GitHub}`;  
+  // add Contact
+  markdown += "## " + sections[7] + "\n";
+  markdown += "Email: " + data.email + "\n";
+  markdown += "GitHub: " + data.GitHub + "\n";
+
+  return markdown;
 }
+//   return `# ${data.title}
+
+//   ## License
+//     ${data.license}
+    
+//   ## Table of Contents
+
+//     - [Description](#description)
+//     - [installation](#installation)
+//     - [testing](#testing)
+//     - [contribution](#contribution)
+//     - [Mock-Up](#mock-up)
+//     - [Application](#link-to-app)
+//     - [license](#license)
+//     - [email](#email)
+//     - [GitHub](#GitHub)
+    
+//   ## Description
+//   ${data.description}
+    
+//   ## Installation
+//   ${data.installation}
+    
+//   ## Testing
+//   ${data.testing}
+    
+//   ## Contribution
+//   ${data.contribution}
+
+//   ## Mock-Up
+
+//   ## Contact Me  
+//     Email: ${data.email}
+  
+//     GitHub: ${data.GitHub}`;  
+// }
 
 module.exports = generateMarkdown;
