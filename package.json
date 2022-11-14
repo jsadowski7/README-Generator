@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jsadowski7/README-Generator/issues"
   },
-  "homepage": "https://github.com/jsadowski7/README-Generator#readme"
+  "homepage": "https://github.com/jsadowski7/README-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }
