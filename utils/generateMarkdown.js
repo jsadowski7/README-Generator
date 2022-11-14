@@ -47,11 +47,15 @@ function renderLicenseSection(license){
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   const sections = ["Description", "Installation", "Testing", "Contribution", "Mock-Up", "Application", "License", "Contact"];
-
+// add title
   let markdown = "# " + data.title + "\n";
-
+// blank line
+  markdown =- "\n";
+// display license badge at top of readme
   markdown += renderLicenseBadge(data.license) + "\n";
 
+  markdown =- "\n";
+// add Table of Contents
   markdown += "## Table of Contents\n";
   for (let i = 0; i < sections.length; i++) {
     if (! (sections[i] === "License" && data.license === "None")) {
@@ -59,36 +63,36 @@ function generateMarkdown(data) {
     }
   }
   markdown += "\n";
-
+// add description
   markdown += "## " + sections[0] + "\n";
   markdown += data.description + "\n";
   markdown += "\n";
 
-  // add installation
+// add installation
   markdown += "## " + sections[1] + "\n";
   markdown += data.install + "\n";
   markdown += "\n";
 
-  // add testing
+// add testing
   markdown += "## " + sections[2] + "\n";
   markdown += data.testing + "\n";
   markdown += "\n";
 
-  // add contributing
+// add contributing
   markdown += "## " + sections[3] + "\n";
   markdown += data.contribution + "\n";
   markdown += "\n";
 
-  // add mock-up
+// add mock-up
   markdown += "## " + sections[4] + "\n";
   markdown += data.test + "\n";
   markdown += "\n";
 
-  // add license
+// add license
   markdown += renderLicenseSection(data.license) + "\n";
   markdown += "\n";
   
-  // add Contact
+// add Contact
   markdown += "## " + sections[7] + "\n";
   markdown += "Email: " + data.email + "\n";
   markdown += "GitHub: " + data.GitHub + "\n";

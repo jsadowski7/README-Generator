@@ -9,29 +9,69 @@ const questions = [
     {
         type: 'input',
         message: 'What is the name of your project?',
-        name: 'title'
+        name: 'title',
+        validate: (titleCheck) => {
+            if (titleCheck) {
+                return true;
+            } else {
+                console.log("Please enter a title.");
+                return false;
+            }
+        },
     },
     {
         type: 'input',
         message: 'Please enter a description of your project',
-        name: 'description'
+        name: 'description',
+        validate: (descCheck) => {
+            if (descCheck) {
+                return true;
+            } else {
+                console.log("Please enter a description.");
+                return false;
+            }
+        },
     },
     {
         type: 'input',
         message: 'What command should be run to install dependencies?',
         name: 'installation',
-        default: 'npm i -y'
+        default: 'npm i -y',
+        validate: (installCheck) => {
+            if (installCheck) {
+                return true;
+            } else {
+                console.log("Please add installation instructions.");
+                return false;
+            }
+        },
     },
     {
         type: 'input',
         message: 'What command should be run to run tests?',
         name: 'testing',
-        default: 'npm test'
+        default: 'npm test',
+        validate: (testCheck) => {
+            if (testCheck) {
+                return true;
+            } else {
+                console.log("Please add testing instructions.");
+                return false;
+            }
+        },
     },
     {
         type: 'input',
         message: 'What does the user need to know about contributing to the Repo?',
-        name: 'contribution'
+        name: 'contribution',
+        validate: (contCheck) => {
+            if (contCheck) {
+                return true;
+            } else {
+                console.log("Please enter contribution instructions.");
+                return false;
+            }
+        },
     },
     {
         type: 'input',
@@ -42,10 +82,18 @@ const questions = [
     {
         type: 'input',
         message: 'Insert your application URL:',
-        name: 'link-to-app'
+        name: 'link-to-app',
+        validate: (linkCheck) => {
+            if (linkCheck) {
+                return true;
+            } else {
+                console.log("Please add the link to your app.");
+                return false;
+            }
+        },
     },
     {
-        type: 'input',
+        type: 'list',
         message: 'What kind of license would you like to use?',
         name: 'license',
         choices: licenses
@@ -53,12 +101,28 @@ const questions = [
     {
         type: 'input', 
         message: 'What is your GitHub username?',
-        name: 'GitHub'
+        name: 'GitHub',
+        validate: (gitHubCheck) => {
+            if (gitHubCheck) {
+                return true;
+            } else {
+                console.log("Please enter your GitHub username.");
+                return false;
+            }
+        },
     },
     {
         type: 'input',
         message: 'What is your email address?',
-        name: 'email'
+        name: 'email',
+        validate: (emailCheck) => {
+            if (emailCheck) {
+                return true;
+            } else {
+                console.log("Please enter your email address.");
+                return false;
+            }
+        },
     }
 ];
 
