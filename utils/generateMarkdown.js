@@ -95,41 +95,5 @@ function generateMarkdown(data) {
 
   return markdown;
 }
-//   return `# ${data.title}
-
-//   ## License
-//     ${data.license}
-    
-//   ## Table of Contents
-
-//     - [Description](#description)
-//     - [installation](#installation)
-//     - [testing](#testing)
-//     - [contribution](#contribution)
-//     - [Mock-Up](#mock-up)
-//     - [Application](#link-to-app)
-//     - [license](#license)
-//     - [email](#email)
-//     - [GitHub](#GitHub)
-    
-//   ## Description
-//   ${data.description}
-    
-//   ## Installation
-//   ${data.installation}
-    
-//   ## Testing
-//   ${data.testing}
-    
-//   ## Contribution
-//   ${data.contribution}
-
-//   ## Mock-Up
-
-//   ## Contact Me  
-//     Email: ${data.email}
-  
-//     GitHub: ${data.GitHub}`;  
-// }
 
 module.exports = generateMarkdown;
