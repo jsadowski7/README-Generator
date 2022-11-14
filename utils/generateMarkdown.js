@@ -49,12 +49,10 @@ function generateMarkdown(data) {
   const sections = ["Description", "Installation", "Testing", "Contribution", "Mock-Up", "Application", "License", "Contact"];
 // add title
   let markdown = "# " + data.title + "\n";
-// blank line
-  markdown =- "\n";
+  
 // display license badge at top of readme
   markdown += renderLicenseBadge(data.license) + "\n";
 
-  markdown =- "\n";
 // add Table of Contents
   markdown += "## Table of Contents\n";
   for (let i = 0; i < sections.length; i++) {
