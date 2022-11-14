@@ -35,4 +35,4 @@ Please see https://mit-license.org/ to get info about this license
 
 ## Contact
 Email: jasadowski7@gmail.com
-GitHub: jsadowski7
+[GitHub:] https://github.com/jsadowski7
