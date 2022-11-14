@@ -76,8 +76,8 @@ const questions = [
     {
         type: 'input',
         message: 'Insert link to Mock-up if needed:',
-        name: 'mock-up',
-        default: './assets/images/'
+        name: 'mockup',
+        default: '![Project-Name](./assets/images/your-photo)'
     },
     {
         type: 'input',

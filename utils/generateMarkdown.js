@@ -1,4 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
+
+const { up } = require("inquirer/lib/utils/readline");
+
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   let badge = "";
@@ -49,7 +52,7 @@ function generateMarkdown(data) {
   const sections = ["Description", "Installation", "Testing", "Contribution", "Mock-Up", "Application", "License", "Contact"];
 // add title
   let markdown = "# " + data.title + "\n";
-  
+
 // display license badge at top of readme
   markdown += renderLicenseBadge(data.license) + "\n";
 
@@ -83,7 +86,7 @@ function generateMarkdown(data) {
 
 // add mock-up
   markdown += "## " + sections[4] + "\n";
-  markdown += data.test + "\n";
+  markdown += data.mockup + "\n";
   markdown += "\n";
 
 // add license
