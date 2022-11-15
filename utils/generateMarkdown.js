@@ -71,7 +71,7 @@ function generateMarkdown(data) {
 
 // add installation
   markdown += "## " + sections[1] + "\n";
-  markdown += data.install + "\n";
+  markdown += data.installation + "\n";
   markdown += "\n";
 
 // add testing
