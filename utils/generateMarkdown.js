@@ -96,7 +96,6 @@ function generateMarkdown(data) {
 // add Contact
   markdown += "## " + sections[7] + "\n";
   markdown += "Email: " + data.email + "\n";
-  markdown =+ "\n";
   markdown += "GitHub: " + data.GitHub + "\n";
 
   return markdown;
