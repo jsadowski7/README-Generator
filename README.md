@@ -27,7 +27,7 @@ If a user wants to contribute to this repo they can download the code using an s
 Video Demo: https://drive.google.com/file/d/1v28cyk85DOjzfdJw2y5ATlQ8491BaVW9/view 
 
 ## Mock-Up
-![README-Generator](./assets/images/node.jsSC.png)
+![README-Generator](../assets/images/node.jsSC.png)
 
 ## License
 Please see https://mit-license.org/ to get info about this license
