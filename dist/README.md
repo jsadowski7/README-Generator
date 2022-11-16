@@ -23,7 +23,7 @@ To test the application open an integrated terminal for the index.js file and ru
 If a user wants to contribute to this repo they can download the code using an ssh key and work locally from their own repository.
 
 ## Mock-Up
-![README-Generator](./assets/images/node.jsSC.png)
+![README-Generator](../assets/images/node.jsSC.png)
 
 ## License
 Please see https://mit-license.org/ to get info about this license
